@@ -1,0 +1,217 @@
+---
+title: "L01 Visualization"
+subtitle: "Data Science 1 with R (STAT 301-1)"
+author: "YOUR NAME"
+format:
+  html:
+    toc: true
+    embed-resources: true
+    link-external-newwindow: true
+
+execute:
+  warning: false
+
+from: markdown+emoji 
+---
+
+::: {.callout-tip icon=false}
+
+## Github Repo Link
+
+To link to your github **repo**sitory, appropriately edit the example link below. Meaning replace `https://your-github-repo-url` with your github repo url. Suggest verifying the link works before submitting.
+
+[https://your-github-repo-url](https://your-github-repo-url)
+
+:::
+
+::: callout-warning
+Make sure your solutions are clearly indicated and that your document is neatly formatted. 
+:::
+
+## Overview
+
+The goal of this lab is to start building the skills to explore data through visualization using the `ggplot2` package in R (member of the `tidyverse`). Students will also learn to access and utilize R documentation.
+
+## Load packages
+
+You should always begin by loading all necessary packages towards the beginning of your document.
+
+```{r}
+#| label: load-pkgs
+
+# Loading package(s)
+
+```
+
+
+## Datasets 
+
+This lab utilizes the `mpg` and `diamonds` datasets. Both come with `ggplot2` and their documentation/codebooks can be accessed with `?mpg` and `?diamonds`, provided you have installed and loaded `ggplot2` to your current R session. The case study utilizes `tinder_data.csv` located in your `data` folder. The following line of code reads in the data.
+
+```{r}
+#| label: load-data
+
+# read in data
+tinder_data <- read_csv("data/tinder_data.csv")
+```
+
+
+## Exercises
+
+### Exercise 1 
+
+There are 3 particularly important components to our template for building a graphic with `ggplot2`. They are `<DATA>`, `<GEOM_FUNCTION>`, and `<MAPPINGS>`. The importance of `<DATA>` is obvious. `<GEOM_FUNCTION>` is referring to the selection of a **geom**. `<MAPPINGS>`, specifically `aes(<MAPPINGS>)`, is referring to the process of defining **aesthetic mappings**.
+
+* What is a **geom**?
+* What is an **aesthetic mapping**?
+
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+### Exercise 2
+
+Construct a scatterplot of `hwy` versus `cty` using the `mpg` dataset. What is the problem with this plot? How could you improve it?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+
+
+### Exercise 3
+
+Construct a scatterplot of `hwy` versus `cty`. Set the color of the points to `drv`.
+
+Now construct a scatterplot of `hwy` versus `cty`. Set the color of the points to your favorite color (try typing `colors()` in the console) and `facet` by `drv`. Read `?facet_wrap` and adjust the `ncol` and `scales` as necessary.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+What are the advantages to using faceting instead of the color aesthetic? What are the disadvantages? How might the balance change if you had a larger dataset?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+### Exercise 4
+
+Construct a scatterplot of `hwy` vs `cty`. Next, map a third numerical variable to `color`, then `size`, then `shape`. 
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+How do the aesthetics behave differently for categorical versus numerical variables? In other words, which variable types (numeric/categorical) are appropriate to match to which aesthetics (size/shape/color)?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+### Exercise 5
+
+Construct a histogram of the `carat` variable in the `diamonds` dataset. Adjust the `bins` to an appropriate value. Add a `title`, remove the axis label that says `count`, and add a `caption`: "Source: ggplot2 package".
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+### Exercise 6
+
+Construct 2 appropriate graphics to show the relationship between `carat` and `cut`. 
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+### Exercise 7
+
+Construct a barplot of `cut`. Add in `aes(fill = carat > 0.7)`.
+
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+### Exercise 8
+
+When would you use `facet_grid()` versus `facet_wrap()`? When using `facet_grid()` it is suggested that you put the variable with more unique levels in the columns. Why do you think that this practice is suggested?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+
+## Case Study
+
+Congratulations, you just landed your first job as a data analyst for Tinder! The dataset is stored in the `data` folder called `tinder_data`. A codebook, `tinder_data_codebook.csv`, provides a description of each of the variable names. This has been read in for you at the top of the document. We will learn more about importing data later in the quarter.
+
+**Your first assignment is to determine if there is a relationship between messages sent and messages received and how this differs based on user gender.** Your boss has asked for a one paragraph summary with graphics to support your conclusions. Your boss wants all graphics *saved* into a folder named "plots". Hint: `ggsave()`.
+
+Since this is your first project as a data analyst you have been provided some tips and considerations for getting started:
+
+ - When approaching a research question it is important to use univariate, bivariate, and multivariate analysis (depending on the problem) to get a better understanding of your data and also identify any potential problems.
+ - How might the distribution of your variables impact your conclusions? Outliers? Weird values? Imbalanced classes?
+ - How might `coord_fixed()` and `geom_abline()` improve a graphic?
+ - Feel free to be creative! It is your job to answer this question and interpret conclusions in the most appropriate ways you see fit.
+
+This dataset was provided by [Swipestats.io](https://www.swipestats.io/).
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+## Graduate Challenge
+
+::: callout-important
+Graduate students are required to complete this challenge. **It is optional for undergraduate students.**
+:::
+
+Recreate the following graphic:
+
+- alpha = 0.25
+- theme is with Google Docs Chart from [ggthemes package](https://jrnold.github.io/ggthemes/reference/index.html).
+
+Why might your graph not match the example exactly? What could we do to ensure our graphs were identical?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
