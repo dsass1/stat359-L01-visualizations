@@ -1,5 +1,4 @@
 # L01-visualization ----
-# Stat 301-1
 
 # load packages and data --------------------------------------------------
 

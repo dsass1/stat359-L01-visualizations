@@ -2622,7 +2622,7 @@ vertical-align: -.125em;
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">L01 Visualization</h1>
-<p class="subtitle lead">Data Science 1 with R (STAT 301-1)</p>
+<p class="subtitle lead">Foundations of Data Science with R (STAT 359)</p>
 </div>
 
 
@@ -2684,13 +2684,17 @@ Github Repo Link
 </section>
 <section id="datasets" class="level2">
 <h2 class="anchored" data-anchor-id="datasets">Datasets</h2>
-<p>This lab utilizes the <code>mpg</code> and <code>diamonds</code> datasets. Both come with <code>ggplot2</code> and their documentation/codebooks can be accessed with <code>?mpg</code> and <code>?diamonds</code>, provided you have installed and loaded <code>ggplot2</code> to your current R session.</p>
+<p>This lab utilizes the <code>mpg</code> and <code>diamonds</code> datasets. Both come with <code>ggplot2</code> and their documentation/codebooks can be accessed with <code>?mpg</code> and <code>?diamonds</code>, provided you have installed and loaded <code>ggplot2</code> to your current R session. The case study utilizes <code>tinder_data.csv</code> located in your <code>data</code> folder. The following line of code reads in the data.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># read in data</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tinder_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/tinder_data.csv&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="exercises" class="level2">
 <h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
 <section id="exercise-1" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-1">Exercise 1</h3>
-<p>There are three particularly important parameters to our template for building a graphic with <code>ggplot2</code>. They are <code>&lt;DATA&gt;</code>, <code>&lt;GEOM_FUNCTION&gt;</code>, and <code>&lt;MAPPINGS&gt;</code>. The importance of <code>&lt;DATA&gt;</code> is obvious. <code>&lt;GEOM_FUNCTION&gt;</code> is referring to the selection of a <strong>geom</strong>. <code>&lt;MAPPINGS&gt;</code>, specifically <code>aes(&lt;MAPPINGS&gt;)</code>, is referring to the process of defining <strong>aesthetic mappings</strong>.</p>
+<p>There are 3 particularly important components to our template for building a graphic with <code>ggplot2</code>. They are <code>&lt;DATA&gt;</code>, <code>&lt;GEOM_FUNCTION&gt;</code>, and <code>&lt;MAPPINGS&gt;</code>. The importance of <code>&lt;DATA&gt;</code> is obvious. <code>&lt;GEOM_FUNCTION&gt;</code> is referring to the selection of a <strong>geom</strong>. <code>&lt;MAPPINGS&gt;</code>, specifically <code>aes(&lt;MAPPINGS&gt;)</code>, is referring to the process of defining <strong>aesthetic mappings</strong>.</p>
 <ul>
 <li>What is a <strong>geom</strong>?</li>
 <li>What is an <strong>aesthetic mapping</strong>?</li>
@@ -2708,7 +2712,6 @@ Solution
 <p>YOUR SOLUTION HERE</p>
 </div>
 </div>
-<p><br></p>
 </section>
 <section id="exercise-2" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-2">Exercise 2</h3>
@@ -2726,7 +2729,6 @@ Solution
 <p>YOUR SOLUTION HERE</p>
 </div>
 </div>
-<p><br></p>
 </section>
 <section id="exercise-3" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-3">Exercise 3</h3>
@@ -2745,7 +2747,6 @@ Solution
 <p>YOUR SOLUTION HERE</p>
 </div>
 </div>
-<p><br></p>
 <p>What are the advantages to using faceting instead of the color aesthetic? What are the disadvantages? How might the balance change if you had a larger dataset?</p>
 <div class="callout-tip callout callout-style-default no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -2760,7 +2761,6 @@ Solution
 <p>YOUR SOLUTION HERE</p>
 </div>
 </div>
-<p><br></p>
 </section>
 <section id="exercise-4" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-4">Exercise 4</h3>
@@ -2778,7 +2778,6 @@ Solution
 <p>YOUR SOLUTION HERE</p>
 </div>
 </div>
-<p><br></p>
 <p>How do the aesthetics behave differently for categorical versus numerical variables? In other words, which variable types (numeric/categorical) are appropriate to match to which aesthetics (size/shape/color)?</p>
 <div class="callout-tip callout callout-style-default no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -2793,7 +2792,6 @@ Solution
 <p>YOUR SOLUTION HERE</p>
 </div>
 </div>
-<p><br></p>
 </section>
 <section id="exercise-5" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-5">Exercise 5</h3>
@@ -2811,7 +2809,6 @@ Solution
 <p>YOUR SOLUTION HERE</p>
 </div>
 </div>
-<p><br></p>
 </section>
 <section id="exercise-6" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-6">Exercise 6</h3>
@@ -2829,7 +2826,6 @@ Solution
 <p>YOUR SOLUTION HERE</p>
 </div>
 </div>
-<p><br></p>
 </section>
 <section id="exercise-7" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-7">Exercise 7</h3>
@@ -2847,7 +2843,6 @@ Solution
 <p>YOUR SOLUTION HERE</p>
 </div>
 </div>
-<p><br></p>
 </section>
 <section id="exercise-8" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-8">Exercise 8</h3>
@@ -2865,7 +2860,6 @@ Solution
 <p>YOUR SOLUTION HERE</p>
 </div>
 </div>
-<p><br></p>
 </section>
 </section>
 <section id="case-study" class="level2">
@@ -2880,10 +2874,35 @@ Solution
 <li>Feel free to be creative! It is your job to answer this question and interpret conclusions in the most appropriate ways you see fit.</li>
 </ul>
 <p>This dataset was provided by <a href="https://www.swipestats.io/">Swipestats.io</a>.</p>
+<div class="callout-tip callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>YOUR SOLUTION HERE</p>
+</div>
+</div>
 </section>
 <section id="graduate-challenge" class="level2">
 <h2 class="anchored" data-anchor-id="graduate-challenge">Graduate Challenge</h2>
-<p><strong>Graduate students are required to complete this challenge. It is optional for undergraduate students.</strong></p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Graduate students are required to complete this challenge. <strong>It is optional for undergraduate students.</strong></p>
+</div>
+</div>
 <p>Recreate the following graphic:</p>
 <ul>
 <li>alpha = 0.25</li>
